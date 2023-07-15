@@ -1,0 +1,25 @@
+#workflow name
+name: hellow
+
+#Event
+on: push
+
+#Jobs attributes
+jobs: 
+
+  #jobs identifier (we should have at least on job identifier)
+  efar:
+    name: hellow jobs efar
+
+    #runner (a computer resource a GitHub will uses to run each job)
+    runs-on: ubuntu-latest
+
+    #steps are tasks with in each jobs- steps can run commands or actions
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+      run: echo Hello, world!
+      - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
